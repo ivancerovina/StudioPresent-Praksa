@@ -12,15 +12,25 @@
     <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
           rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
 
     <!-- fontawesome -->
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/7bc2133712.js"></script>
 
     <!-- styles -->
-    <link href="resources/styles/navigation.css" rel="stylesheet">
     <link href="resources/styles/index-page.css" rel="stylesheet">
+
+    <!-- swiper js -->
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
+<div class="popup hidden">
+    <h2>Ovaj sajt koristi kolačiće</h2>
+    <p>Koristimo kolačiće kako bismo vam pružili bolje korisničko iskustvo. Nastavkom pregledanja sajta, pristajete na korišćenje kolačića.</p>
+        <a class="close-button fa-solid fa-xmark"></a>
+</div>
 <header>
     <img alt="DVG Company Subotica Logo" class="logo" src="resources/images/logo.png">
     <div class="appearance-container">
@@ -32,6 +42,7 @@
     </div>
 </header>
 <nav>
+    <a class="nav-button fa-solid fa-bars"></a>
     <a class="nav-item" href="">
         <span class="title">O nama</span>
         <span class="subtitle">vizija za uspeh</span>
@@ -63,7 +74,17 @@
 </nav>
 <main>
     <section class="slideshow-section">
-        <!-- TODO slideshow using slider.js -->
+        <div class="swiper headerSwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
     </section>
 
     <section class="intro-section">
@@ -153,27 +174,27 @@
 
         <div class="item-container">
             <div class="item">
-                <img src="resources/images/garbage-bag.png" alt="Garbage bag">
+                <img alt="Garbage bag" src="resources/images/garbage-bag.png">
                 <p>Kese i folije</p>
                 <div class="red-line"></div>
             </div>
             <div class="item">
-                <img src="resources/images/kitchen-appliances.png" alt="Steel wool for kitchen">
+                <img alt="Steel wool for kitchen" src="resources/images/kitchen-appliances.png">
                 <p>Za kuhinju</p>
                 <div class="red-line"></div>
             </div>
             <div class="item">
-                <img src="resources/images/toilet-paper.png" alt="Paper towel">
+                <img alt="Paper towel" src="resources/images/toilet-paper.png">
                 <p>Ubrusi i toalet papiri</p>
                 <div class="red-line"></div>
             </div>
             <div class="item">
-                <img src="resources/images/cosmetics.png" alt="Cosmetics">
+                <img alt="Cosmetics" src="resources/images/cosmetics.png">
                 <p>Kozmetika</p>
                 <div class="red-line"></div>
             </div>
             <div class="item">
-                <img src="resources/images/buckets.png" alt="Plastic bucket">
+                <img alt="Plastic bucket" src="resources/images/buckets.png">
                 <p>Plastične kante</p>
                 <div class="red-line"></div>
             </div>
@@ -185,35 +206,35 @@
         <div class="gray-line"></div>
         <div class="item-container">
             <div class="item">
-                <img src="resources/images/dove.png" alt="Dove brand logo">
+                <img alt="Dove brand logo" src="resources/images/dove.png">
                 <p>Dove</p>
             </div>
             <div class="item">
-                <img src="resources/images/nivea.png" alt="Nivea brand logo">
+                <img alt="Nivea brand logo" src="resources/images/nivea.png">
                 <p>Nivea</p>
             </div>
             <div class="item">
-                <img src="resources/images/palmolive.png" alt="Palmolive brand logo">
+                <img alt="Palmolive brand logo" src="resources/images/palmolive.png">
                 <p>Palmolive</p>
             </div>
             <div class="item">
-                <img src="resources/images/vanish.png" alt="Vanish brand logo">
+                <img alt="Vanish brand logo" src="resources/images/vanish.png">
                 <p>Vanish</p>
             </div>
             <div class="item">
-                <img src="resources/images/ajax.png" alt="Ajax brand logo">
+                <img alt="Ajax brand logo" src="resources/images/ajax.png">
                 <p>Ajax</p>
             </div>
             <div class="item">
-                <img src="resources/images/cif.png" alt="Cif brand logo">
+                <img alt="Cif brand logo" src="resources/images/cif.png">
                 <p>Cif</p>
             </div>
         </div>
-        <a class="button">Svi brendovi u nasem portfoliuju</a>
+        <a class="button">Svi brendovi u našem portfoliju</a>
     </section>
     <footer>
         <div class="container">
-            <img src="resources/images/footer-logo.png" alt="DVG Logo">
+            <img alt="DVG Logo" src="resources/images/footer-logo.png">
             <div class="container-item contact-container">
                 <h2>DVG Company</h2>
                 <div class="item">
@@ -257,5 +278,9 @@
         </div>
     </footer>
 </main>
+
+<script src="resources/scripts/index-page.js"></script>
+<script src="resources/scripts/navigation.js"></script>
+<script src="resources/scripts/themes.js"></script>
 </body>
 </html>
